@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  background-color: #7fb77e;
+  position: relative;
+  text-align: center;
+}
+
+/* Html elements */
+
+h1 {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 3rem;
+  position: relative;
+  top: 4.4rem;
+  color: #0f3460;
+}
+
+h2 {
+  margin-bottom: 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+  color: aliceblue;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #212121;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+}
+
+button:hover {
+  color: #e8e8e8;
+}
+
+button:hover::before {
+  width: 100%;
+}
+
+/* ids and classes */
+
+.facts {
+  font-family: "Kalam", cursive;
+  font-weight: 400;
+  font-size: x-large;
+}
+
+#box {
+  display: inline-block;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 12.5rem;
+  text-align: center;
+  width: 50%;
+  height: fit-content;
+  margin: 0 auto 0 auto;
+  font-family: cursive;
+
+  /* lets try neuromorphism */
+  border-radius: 3.125rem;
+  background: #7fb77e;
+  box-shadow: 20px 20px 60px #6c9c6b, -20px -20px 60px #92d291;
+}
+
+/* media queries*/
+@media (max-width: 768px) {
+  #box {
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto 0 auto;
+  }
+  .facts {
+    font-family: "Kalam", cursive;
+    font-weight: 500;
+    font-size: large;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+}
